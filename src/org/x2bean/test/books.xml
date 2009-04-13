@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Books>
+	<totalNum>45</totalNum>
+	<book>
+		<bookName>selang</bookName>
+		<author>woody</author>
+		<price>100</price>
+		<testArray>13</testArray>
+		<testArray>14</testArray>
+	</book>
+
+	<book>
+		<bookName>liumang</bookName>
+		<author>ydoow</author>
+		<price>101</price>
+		<testArray>23</testArray>
+		<testArray>54</testArray>
+	</book>
+
+</Books>
