@@ -1,3 +1,9 @@
+X2Bean version 2.1 released
+
+1. give tow interface for parsing xml from an inputstream
+2. tinker up some bugs
+--------------------------------------------------------------------------------------------
+
 X2Bean version 1.1 released
 　　This released version supports parsing attributes. And in last version, I didn't consider the situation, there are same tag names in different path of the XML. Because I used too many "getElementsByTagName" in my codes, it made a big mistake. Now I contribute, saving these problems.
 　　And the new version no longer relies on log4j to log.
