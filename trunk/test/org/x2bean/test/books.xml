@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Books>
 	<totalNum>45</totalNum>
-	<book>
-		<bookName>selang</bookName>
+	<book bookName="selang">
 		<author>woody</author>
 		<price>100</price>
 		<testArray>13</testArray>
 		<testArray>14</testArray>
 	</book>
 
-	<book>
+	<book price="101">
 		<bookName>liumang</bookName>
 		<author>ydoow</author>
-		<price>101</price>
 		<testArray>23</testArray>
 		<testArray>54</testArray>
 	</book>
