@@ -70,9 +70,10 @@ public class AnalyUtil {
 				if (t_lineLen == 102) {
 					for (int i = 0; i < fileLists.length; i++) {
 						if (i != 0) {
-							t_cfgFileOut.write("\\\r\n");
+							t_cfgFileOut.write(" \\\r\n                         ");
+							
 						}
-						t_cfgFileOut.write(fileLists[i]);
+						t_cfgFileOut.write(fileLists[i].replace('\\', '/'));
 					}
 
 				}

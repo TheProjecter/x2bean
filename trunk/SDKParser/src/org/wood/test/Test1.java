@@ -86,7 +86,7 @@ public class Test1 {
 		standGrabber.start();
 		System.out.println(t_process.waitFor());
 
-		System.out.println(errGrabber.getM_res());
-		System.out.println(standGrabber.getM_res());
+		//System.out.println(errGrabber.getM_res());
+		//System.out.println(standGrabber.getM_res());
 	}
 }
