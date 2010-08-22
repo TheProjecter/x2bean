@@ -1,32 +1,46 @@
 package org.wood.util;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class UtilOutGrabber extends Thread {
 
-	private StringBuffer m_res = new StringBuffer(1024);
+	public enum TYPE {
+		ERROR, NORMAL
+	};
 
 	private InputStream m_input;
 
-	public UtilOutGrabber(InputStream t_input) {
-		m_input = t_input;
+	private TYPE m_type;
+
+	public UtilOutGrabber(InputStream input, TYPE type) {
+		m_input = input;
+		m_type = type;
+	}
+
+	public UtilOutGrabber(InputStream input) {
+		m_input = input;
+		m_type = TYPE.NORMAL;
 	}
 
 	@Override
 	public void run() {
-		int t_inChr;
+		String t_temp;
+		BufferedReader t_reader = new BufferedReader(new InputStreamReader(
+				m_input));
 		try {
-			while ((t_inChr = m_input.read()) != -1) {
-				m_res.append((char) t_inChr);
+			while ((t_temp = t_reader.readLine()) != null) {
+				if (m_type == TYPE.ERROR) {
+					Logger.error(t_temp);
+				} else {
+					Logger.info(t_temp);
+				}
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			Logger.error(e);
 		}
-	}
-
-	public StringBuffer getM_res() {
-		return m_res;
 	}
 
 }
